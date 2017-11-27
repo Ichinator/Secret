@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ path ('homepage') }}">Accueil</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Les fichiers</a></li>
+      <li><a href="#">Nos membres</a></li>
+      <li><a href="#">Quelques règles</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{{ path ('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span>Inscription</a></li>
+      <li><a href="{{ path ('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in"></span>Connexion</a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block stylesheets %}
+{{parent ()}}
+{% endblock %}
